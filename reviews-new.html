@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Tour Reviews — Travel Smart</title>
+  <meta name="description" content="Read authentic reviews from travelers who have experienced our tours. Share your own travel experiences and help others plan their perfect trip." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="./assets/fav-icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="reviews.css" />
+</head>
+<body>
+ <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Travel Smart home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-text">Travel Smart</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav"
+          aria-label="Open menu">
+          <i></i>
+          <i></i>
+          <i></i>
+        </button>
+        <ul class="nav-list" id="primaryNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="catalog.html">Trip Catalog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="reviews.html">Tour Review</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle theme"><i class="ri-sun-line"
+            id="themeIcon"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="review-hero">
+      <div class="video-background">
+        <video autoplay muted loop playsinline>
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-tourist-taking-photos-of-a-city-2648-large.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+      </div>
+      <div class="container">
+        <div class="review-hero-content">
+          <div class="hero-icon">
+            <i class="ri-star-smile-fill"></i>
+          </div>
+          <h1>Traveler Reviews</h1>
+          <p>Discover authentic experiences from our global community of travelers. Share your journey and help others find their perfect adventure.</p>
+          
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-number">4.8</div>
+              <div class="hero-stat-label">Average Rating</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number">10K+</div>
+              <div class="hero-stat-label">Happy Travelers</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number">50+</div>
+              <div class="hero-stat-label">Destinations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Review Form Section -->
+    <section class="section" id="write-review">
+      <div class="container">
+        <div class="section-head text-center">
+          <h2>Share Your Experience</h2>
+          <p>Your feedback helps fellow travelers and allows us to continuously improve our services.</p>
+        </div>
+        
+        <div class="review-form-container animate-on-scroll">
+          <form id="reviewForm" class="review-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="revName">Full Name</label>
+                <div class="input-with-icon">
+                  <i class="ri-user-line"></i>
+                  <input type="text" id="revName" placeholder="John Doe" required />
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="revDestination">Destination</label>
+                <div class="input-with-icon">
+                  <i class="ri-map-pin-line"></i>
+                  <select id="revDestination" required></select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Rating</label>
+              <div id="starRatingContainer" class="star-rating">
+                <div class="stars">
+                  <i class="ri-star-line star" data-value="1"></i>
+                  <i class="ri-star-line star" data-value="2"></i>
+                  <i class="ri-star-line star" data-value="3"></i>
+                  <i class="ri-star-line star" data-value="4"></i>
+                  <i class="ri-star-line star" data-value="5"></i>
+                </div>
+                <span id="starRatingText" class="star-rating-text">Click to rate</span>
+              </div>
+              <input type="hidden" id="revRating" value="0" required />
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="revWhen">When did you travel?</label>
+                <div class="input-with-icon">
+                  <i class="ri-calendar-line"></i>
+                  <input type="month" id="revWhen" />
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="revTags">Trip Type</label>
+                <div class="input-with-icon">
+                  <i class="ri-price-tag-3-line"></i>
+                  <select id="revTags" multiple>
+                    <option value="Family-friendly">Family-friendly</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Relaxation">Relaxation</option>
+                    <option value="Cultural">Cultural</option>
+                    <option value="Food & Wine">Food & Wine</option>
+                    <option value="Romantic">Romantic</option>
+                    <option value="Historical">Historical</option>
+                    <option value="Nature">Nature</option>
+                    <option value="Educational">Educational</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="revText">Your Review</label>
+              <div class="input-with-icon textarea-icon">
+                <i class="ri-chat-1-line"></i>
+                <textarea id="revText" rows="5" placeholder="Share your experience, highlights, and any suggestions for improvement..." required></textarea>
+              </div>
+            </div>
+            
+            <div class="form-group checkbox-group">
+              <label class="checkbox-container">
+                <input type="checkbox" name="newsletter" value="yes">
+                <span class="checkmark"></span>
+                <span class="checkbox-text">Subscribe to our newsletter for travel tips and exclusive offers</span>
+              </label>
+            </div>
+            
+            <div id="formError" class="form-error" style="display: none;"></div>
+            <div id="formSuccess" class="form-success" style="display: none;"></div>
+            
+            <button type="submit" class="submit-btn">Submit Review</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Display Section -->
+    <section class="section alt reviews-display-section" id="reviews">
+      <div class="container">
+        <div class="section-head text-center">
+          <h2>Traveler Experiences</h2>
+          <p>Read authentic reviews from our global community of travelers</p>
+        </div>
+        
+        <div class="reviews-filter">
+          <div class="filter-buttons">
+            <button class="filter-button active" data-rating="0">All Reviews</button>
+            <button class="filter-button" data-rating="5">5 Stars</button>
+            <button class="filter-button" data-rating="4">4 Stars</button>
+            <button class="filter-button" data-rating="3">3 Stars</button>
+            <button class="filter-button" data-rating="2">2 Stars</button>
+            <button class="filter-button" data-rating="1">1 Star</button>
+          </div>
+          
+          <div class="sort-reviews">
+            <label for="sortReviews">Sort by:</label>
+            <select id="sortReviews">
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="highest">Highest Rated</option>
+              <option value="lowest">Lowest Rated</option>
+              <option value="helpful">Most Helpful</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="reviews-grid">
+          <div class="histogram-container animate-on-scroll">
+            <h3 class="histogram-title">Rating Distribution</h3>
+            <div id="histogram" class="histogram"></div>
+          </div>
+          
+          <div id="reviewList" class="review-list" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Video Section -->
+    <section class="section testimonial-video-section">
+      <div class="container">
+        <div class="testimonial-grid">
+          <div class="testimonial-content animate-on-scroll">
+            <h2>Hear From Our Travelers</h2>
+            <p>Our travelers share their unforgettable moments and authentic experiences from their journeys around the world.</p>
+            
+            <div class="testimonial-quote">
+              <p>"The cultural immersion experience in Kyoto was beyond anything I could have imagined. Our guide's knowledge of local traditions and hidden spots made this trip truly special."</p>
+              <div class="quote-author">
+                <div class="quote-author-avatar">
+                  <img src="./assets/customer-picture.png" alt="Jennifer">
+                </div>
+                <div class="quote-author-info">
+                  <h4>Jennifer K.</h4>
+                  <p>Japan Explorer Tour</p>
+                </div>
+              </div>
+            </div>
+            
+            <a href="#write-review" class="btn primary">Share Your Story</a>
+          </div>
+          
+          <div class="testimonial-video animate-on-scroll">
+            <video poster="./assets/random nature 1.jpg">
+              <source src="" type="video/mp4">
+            </video>
+            <div class="play-button" data-video-src="https://assets.mixkit.co/videos/preview/mixkit-tourist-taking-photos-of-a-city-2648-large.mp4">
+              <i class="ri-play-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-container">
+          <div class="cta-content">
+            <h2>Ready for Your Next Adventure?</h2>
+            <p>Browse our curated collection of extraordinary destinations and start planning your dream journey today.</p>
+            <div class="cta-buttons">
+              <a href="catalog.html" class="btn primary">Explore Destinations</a>
+              <a href="contact.html" class="btn secondary">Contact Our Experts</a>
+            </div>
+          </div>
+          
+          <div class="cta-image">
+            <img src="./assets/random nature 15.jpg" alt="Scenic destination">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <a class="brand" href="#top"><span class="brand-mark">✦</span><span class="brand-text">Travel Smart</span></a>
+        <p class="muted">Design-forward travel planning for modern explorers.</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+          <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        </div>
+      </div>
+      <div class="col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#stories">Community</a></li>
+          <li><a href="#deals">Partners</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Safety</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Get the app</h4>
+        <div class="badges">
+          <a class="store" href="#" aria-label="Download on App Store"><i class="ri-apple-line"></i> App Store</a>
+          <a class="store" href="#" aria-label="Get it on Google Play"><i class="ri-google-play-line"></i> Google Play</a>
+        </div>
+      </div>
+    </div>
+    <div class="container legal">
+      <span>© <span id="year"></span> Travel Smart</span>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#sitemap">Sitemap</a>
+    </div>
+  </footer>
+
+  <!-- Video Modal -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-modal-content">
+      <button id="videoModalClose" class="video-modal-close"><i class="ri-close-line"></i></button>
+      <video id="videoPlayer" controls></video>
+    </div>
+  </div>
+
+  <script src="data.js" defer></script>
+  <script src="shared.js" defer></script>
+  <script src="reviews-new.js" defer></script>
+</body>
+</html>

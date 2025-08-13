@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Tour Reviews — Travel Smart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="reviews.css" />
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Travel Smart home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-text">Travel Smart</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav"
+          aria-label="Open menu">
+          <i></i>
+          <i></i>
+          <i></i>
+        </button>
+        <ul class="nav-list" id="primaryNav">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./catalog.html">Trip Catalog</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./reviews.html">Tour Review</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle theme"><i class="ri-sun-line"
+            id="themeIcon"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner review-hero">
+      <div class="container">
+        <div class="hero-content animate-on-scroll">
+          <h1>Share Your Travel Stories</h1>
+          <p class="hero-subtitle">Your experiences help fellow travelers make informed decisions</p>
+          <div class="review-stats">
+            <div class="stat-item">
+              <span class="stat-number">4.8</span>
+              <span class="stat-label">Average Rating</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2.5k+</span>
+              <span class="stat-label">Reviews</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="revTitle">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="revTitle">Package Review</h2>
+            <p>Leave a review (not stored on server) and see live rating histogram.</p>
+          </div>
+        </div>
+        <div class="reviews-container">
+          <div class="reviews-grid">
+            <div class="review-form-container animate-on-scroll">
+              <div class="form-card">
+                <h3><i class="ri-star-line"></i> Write a Review</h3>
+                <form id="reviewForm" class="form">
+                  <div class="grid-2">
+                    <label class="field"><span>Name</span><input id="revName" type="text" required /></label>
+                    <label class="field"><span>Destination</span><select id="revDestination"></select></label>
+                  </div>
+                  <div class="grid-2">
+                    <label class="field"><span>Rating</span>
+                      <div class="star-rating-input">
+                        <select id="revRating" required>
+                          <option value="5">5</option>
+                          <option value="4">4</option>
+                          <option value="3">3</option>
+                          <option value="2">2</option>
+                          <option value="1">1</option>
+                        </select>
+                        <div class="star-display" id="starDisplay">
+                          <i class="ri-star-fill"></i>
+                          <i class="ri-star-fill"></i>
+                          <i class="ri-star-fill"></i>
+                          <i class="ri-star-line"></i>
+                          <i class="ri-star-line"></i>
+                        </div>
+                      </div>
+                    </label>
+                    <label class="field"><span>When did you travel?</span><input id="revWhen" type="month" /></label>
+                  </div>
+                  <label class="field"><span>Your review</span><textarea id="revText" rows="3" required
+                      placeholder="Share your experience with this destination..."></textarea></label>
+                  <div class="form-actions">
+                    <button class="btn primary" type="submit"><i class="ri-send-plane-fill"></i> Submit review</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="review-stats-container animate-on-scroll" style="animation-delay: 0.2s">
+              <div class="stats-card">
+                <h3><i class="ri-bar-chart-grouped-line"></i> Rating Distribution</h3>
+                <div class="histogram" id="histogram"></div>
+              </div>
+            </div>
+          </div>
+          <div class="review-list-container">
+            <h3><i class="ri-chat-1-line"></i> Recent Reviews</h3>
+            <div id="reviewList" class="review-list" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt featured-destinations" aria-labelledby="featuredTitle">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="featuredTitle">Top Rated Destinations</h2>
+            <p>Our travelers' favorite places with the highest ratings</p>
+          </div>
+        </div>
+        <div class="featured-cards" id="featuredDestinations">
+          <!-- Will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section quick-rate" aria-labelledby="rateTitle">
+      <div class="container">
+        <div class="rate-trip-card animate-on-scroll">
+          <div class="rate-content">
+            <div>
+              <h2 id="rateTitle">Quick Rate Your Trip</h2>
+              <p>Had a recent journey with us? Let us know how it went!</p>
+            </div>
+            <div class="rate-controls">
+              <div class="star-rating-large">
+                <div class="star-icons" id="starIcons">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-line"></i>
+                  <i class="ri-star-line"></i>
+                </div>
+                <span class="rating-value" id="starLabel">Rate: 3</span>
+              </div>
+              <div class="range-control">
+                <input type="range" id="starRange" min="1" max="5" step="1" value="3" class="star-slider" />
+              </div>
+              <button class="btn secondary" id="starBtn"><i class="ri-check-line"></i> Apply Rating</button>
+            </div>
+          </div>
+          <div class="rate-image">
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=800&auto=format&fit=crop"
+              alt="Traveler with camera" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="fbTitle">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="fbTitle">Help Us Improve</h2>
+            <p>Share your thoughts on our website and services</p>
+          </div>
+        </div>
+        <div class="feedback-container animate-on-scroll">
+          <div class="feedback-grid">
+            <div class="feedback-form-container">
+              <div class="form-card">
+                <h3><i class="ri-feedback-line"></i> Website Feedback</h3>
+                <p class="form-subtitle">Your feedback helps us create a better experience for all travelers</p>
+                <form id="feedbackForm" class="form">
+                  <div class="grid-2">
+                    <label class="field"><span>Name</span><input id="fbName" type="text" required /></label>
+                    <label class="field"><span>Email</span><input id="fbEmail" type="email" required /></label>
+                  </div>
+                  <div class="grid-2">
+                    <label class="field">
+                      <span>How would you rate this site?</span>
+                      <div class="rating-with-labels">
+                        <select id="fbRating" required>
+                          <option value="5">Excellent</option>
+                          <option value="4">Good</option>
+                          <option value="3">Average</option>
+                          <option value="2">Poor</option>
+                          <option value="1">Very poor</option>
+                        </select>
+                        <div class="rating-labels">
+                          <span>Poor</span>
+                          <span>Excellent</span>
+                        </div>
+                      </div>
+                    </label>
+                    <label class="field"><span>Topic</span><input id="fbTopic" type="text"
+                        placeholder="Search, UI, content..." /></label>
+                  </div>
+                  <label class="field"><span>Comments</span><textarea id="fbComments" rows="3" required
+                      placeholder="Tell us what you like or how we can improve..."></textarea></label>
+                  <div class="form-actions">
+                    <button class="btn primary" type="submit"><i class="ri-send-plane-fill"></i> Send feedback</button>
+                  </div>
+                </form>
+                <p class="muted" id="feedbackNote"></p>
+              </div>
+            </div>
+            <div class="feedback-image-container">
+              <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop"
+                  alt="Team reviewing feedback" />
+                <div class="image-overlay">
+                  <h3>We Value Your Input</h3>
+                  <p>Every piece of feedback helps us create better travel experiences</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="section testimonials-section" aria-labelledby="testimonialsTitle">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 id="testimonialsTitle">What Our Travelers Say</h2>
+          <p>Authentic testimonials from our community of travelers</p>
+        </div>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-rating">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+          <blockquote>
+            <p>"Travel Smart made our honeymoon absolutely perfect! The personalized itinerary and local recommendations
+              were spot on. We'll definitely book with them again."</p>
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J." class="author-image" />
+            <div>
+              <cite>Sarah J.</cite>
+              <span class="author-trip">Bali Retreat</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll" style="animation-delay: 0.2s">
+          <div class="testimonial-rating">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+          </div>
+          <blockquote>
+            <p>"As a solo traveler, safety was my priority. Travel Smart connected me with amazing local guides and
+              fellow travelers. The experience exceeded my expectations!"</p>
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="author-image" />
+            <div>
+              <cite>Michael T.</cite>
+              <span class="author-trip">Japan Explorer</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll" style="animation-delay: 0.4s">
+          <div class="testimonial-rating">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+          <blockquote>
+            <p>"Our family vacation was seamless from start to finish. The kids loved the activities, and we appreciated
+              how everything was taken care of. Highly recommend!"</p>
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lisa R." class="author-image" />
+            <div>
+              <cite>Lisa R.</cite>
+              <span class="author-trip">Costa Rica Adventure</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <a class="brand" href="#top"><span class="brand-mark">✦</span><span class="brand-text">Travel Smart</span></a>
+        <p class="muted">Design-forward travel planning for modern explorers.</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+          <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        </div>
+      </div>
+      <div class="col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#stories">Community</a></li>
+          <li><a href="#deals">Partners</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Safety</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Get the app</h4>
+        <div class="badges">
+          <a class="store" href="#" aria-label="Download on App Store"><i class="ri-apple-line"></i> App Store</a>
+          <a class="store" href="#" aria-label="Get it on Google Play"><i class="ri-google-play-line"></i> Google
+            Play</a>
+        </div>
+      </div>
+    </div>
+    <div class="container legal">
+      <span>© <span id="year"></span> Travel Smart</span>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#sitemap">Sitemap</a>
+    </div>
+  </footer>
+
+  <script src="data.js" defer></script>
+  <script src="shared.js" defer></script>
+  <script src="reviews.js" defer></script>
+</body>
+
+</html>

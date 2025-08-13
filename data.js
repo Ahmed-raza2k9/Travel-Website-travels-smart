@@ -1,0 +1,256 @@
+// Global travel dataset for all pages
+window.DESTINATIONS = [
+  {
+    id: 'capri-italy',
+    title: 'Capri Cliffs Escape',
+    location: 'Capri, Italy',
+    type: 'beach',
+    image: 'assets/hero 1.jpg',
+    price: 1280,
+    rating: 4.9,
+    tags: ['Sunsets', 'Boat tour', 'Family'],
+    desc: 'Limestone cliffs, azure grottos, and lemon groves with scenic hikes.',
+    durationDays: 4,
+    nextStart: '2025-09-05',
+    discountPct: 10,
+    region: 'Europe',
+    gallery: [
+      'assets/hero 1.jpg',
+      'assets/random nature 8.jpg'
+    ],
+    video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    stays: [
+      { name: 'Cliffside Suites', type: 'Hotel', rating: 4.6, amenities: ['Pool', 'Breakfast', 'Sea view'] },
+      { name: 'Lemon Grove BnB', type: 'BnB', rating: 4.4, amenities: ['Garden', 'Local hosts'] }
+    ],
+    transport: [
+      { mode: 'Flight', from: 'Rome (FCO)', to: 'Naples (NAP)', time: '1h', price: 120 },
+      { mode: 'Ferry', from: 'Naples', to: 'Capri', time: '50m', price: 30 }
+    ]
+  },
+  {
+    id: 'banff',
+    title: 'Banff Alpine Lakes',
+    location: 'Alberta, Canada',
+    type: 'mountain',
+    image: 'assets/random nature 1.jpg',
+    price: 990,
+    rating: 4.8,
+    tags: ['Hiking', 'Glaciers', 'Adventure'],
+    desc: 'Turquoise lakes and rugged peaks in the Canadian Rockies.',
+    durationDays: 6,
+    nextStart: '2025-10-01',
+    discountPct: 0,
+    region: 'North America',
+    gallery: [
+      'assets/random nature 1.jpg'
+    ],
+    video: '',
+    stays: [
+      { name: 'Lakeside Lodge', type: 'Resort', rating: 4.7, amenities: ['Spa', 'Kayaks'] }
+    ],
+    transport: [
+      { mode: 'Flight', from: 'Calgary (YYC)', to: 'Banff', time: '2h drive', price: 60 }
+    ]
+  },
+  {
+    id: 'tokyo',
+    title: 'Neon Nights Tokyo',
+    location: 'Tokyo, Japan',
+    type: 'city',
+    image: 'assets/hero 2.jpg',
+    price: 1380,
+    rating: 4.7,
+    tags: ['Food', 'Museums', 'Luxury'],
+    desc: 'Futuristic cityscapes, Michelin ramen, and serene gardens.',
+    durationDays: 5,
+    nextStart: '2025-08-20',
+    discountPct: 5,
+    region: 'Asia',
+    gallery: [
+      'assets/hero 2.jpg'
+    ],
+    video: '',
+    stays: [
+      { name: 'Shinjuku Tower', type: 'Hotel', rating: 4.5, amenities: ['Metro access', 'Wi‑Fi'] }
+    ],
+    transport: [
+      { mode: 'Flight', from: 'Your city', to: 'Tokyo (NRT/HND)', time: '12h+', price: 900 }
+    ]
+  },
+  {
+    id: 'bali',
+    title: 'Bali Ocean Villas',
+    location: 'Bali, Indonesia',
+    type: 'beach',
+    image: 'assets/random nature 2.jpg',
+    price: 860,
+    rating: 4.6,
+    tags: ['Surf', 'Wellness', 'Family'],
+    desc: 'Lush rice terraces, surf breaks, and sunrise yoga.',
+    durationDays: 7,
+    nextStart: '2025-07-10',
+    discountPct: 12,
+    region: 'Asia',
+    gallery: [
+      'assets/random nature 2.jpg'
+    ],
+    video: '',
+    stays: [ { name: 'Ubud Retreat', type: 'Resort', rating: 4.6, amenities: ['Yoga', 'Spa', 'Breakfast'] } ],
+    transport: [ { mode: 'Flight', from: 'Your city', to: 'Denpasar (DPS)', time: '10h+', price: 700 } ]
+  },
+  {
+    id: 'marrakech',
+    title: 'Marrakech Medina',
+    location: 'Marrakech, Morocco',
+    type: 'cultural',
+    image: 'assets/random nature 3.jpg',
+    price: 920,
+    rating: 4.6,
+    tags: ['Souks', 'Riads', 'Cultural'],
+    desc: 'Colorful souks, spice markets, and ornate riads in the red city.',
+    durationDays: 4,
+    nextStart: '2025-05-22',
+    discountPct: 0,
+    region: 'Africa',
+    gallery: [ 'assets/random nature 3.jpg' ],
+    video: '',
+    stays: [ { name: 'Riad Zellige', type: 'Riad', rating: 4.7, amenities: ['Courtyard', 'Mint tea'] } ],
+    transport: [ { mode: 'Flight', from: 'Your city', to: 'RAK', time: '4h+', price: 350 } ]
+  },
+  {
+    id: 'serengeti',
+    title: 'Serengeti Big Five',
+    location: 'Serengeti, Tanzania',
+    type: 'safari',
+    image: 'assets/random nature 4.jpg',
+    price: 2450,
+    rating: 4.9,
+    tags: ['Game drives', 'Guided', 'Adventure'],
+    desc: 'Witness the great migration and spot the big five with experts.',
+    durationDays: 6,
+    nextStart: '2025-08-01',
+    discountPct: 15,
+    region: 'Africa',
+    gallery: [ 'assets/random nature 4.jpg' ],
+    video: '',
+    stays: [ { name: 'Savanna Tented Camp', type: 'Camp', rating: 4.8, amenities: ['Guides', 'All meals'] } ],
+    transport: [ { mode: 'Flight', from: 'Arusha', to: 'Serengeti', time: '1h', price: 140 } ]
+  },
+  {
+    id: 'paris',
+    title: 'Paris Art Walk',
+    location: 'Paris, France',
+    type: 'city',
+    image: 'assets/hero 3.jpg',
+    price: 1190,
+    rating: 4.7,
+    tags: ['Galleries', 'Cafés', 'Luxury'],
+    desc: 'Boulevards, impressionist galleries, and croissant mornings.',
+    durationDays: 4,
+    nextStart: '2025-06-15',
+    discountPct: 0,
+    region: 'Europe',
+    gallery: [ 'assets/hero 3.jpg' ],
+    video: '',
+    stays: [ { name: 'Left Bank Boutique', type: 'Hotel', rating: 4.5, amenities: ['Breakfast', 'River walk'] } ],
+    transport: [ { mode: 'Flight', from: 'Your city', to: 'CDG/ORY', time: '7h+', price: 600 } ]
+  },
+  {
+    id: 'patagonia',
+    title: 'Patagonia Frontier',
+    location: 'El Chaltén, Argentina',
+    type: 'mountain',
+    image: 'assets/random nature 5.jpg',
+    price: 1680,
+    rating: 4.8,
+    tags: ['Trekking', 'Glaciers', 'Adventure'],
+    desc: 'Jagged peaks, hanging glaciers, and otherworldly winds.',
+    durationDays: 8,
+    nextStart: '2025-11-02',
+    discountPct: 0,
+    region: 'South America',
+    gallery: [ 'assets/random nature 5.jpg' ],
+    video: '',
+    stays: [ { name: 'Fitz Roy Refugio', type: 'Hostel', rating: 4.4, amenities: ['Trails', 'Kitchen'] } ],
+    transport: [ { mode: 'Flight', from: 'Buenos Aires', to: 'El Calafate', time: '3h', price: 180 } ]
+  },
+  {
+    id: 'santorini',
+    title: 'Santorini Blue Domes',
+    location: 'Santorini, Greece',
+    type: 'beach',
+    image: 'assets/random nature 6.jpg',
+    price: 980,
+    rating: 4.6,
+    tags: ['Sunsets', 'Caves', 'Luxury'],
+    desc: 'Caldera views, cliffside suites, and volcanic beaches.',
+    durationDays: 4,
+    nextStart: '2025-07-01',
+    discountPct: 8,
+    region: 'Europe',
+    gallery: [ 'assets/random nature 6.jpg' ],
+    video: '',
+    stays: [ { name: 'Oia Cave Suites', type: 'Hotel', rating: 4.7, amenities: ['Infinity pool', 'Breakfast'] } ],
+    transport: [ { mode: 'Flight', from: 'ATH', to: 'JTR', time: '40m', price: 80 } ]
+  },
+  {
+    id: 'kyoto',
+    title: 'Kyoto Temples',
+    location: 'Kyoto, Japan',
+    type: 'cultural',
+    image: 'assets/random nature 7.jpg',
+    price: 1480,
+    rating: 4.8,
+    tags: ['Tea', 'Shrines', 'Cultural'],
+    desc: 'Torii paths, tea ceremonies, and maple foliage.',
+    durationDays: 5,
+    nextStart: '2025-10-12',
+    discountPct: 0,
+    region: 'Asia',
+    gallery: [ 'assets/random nature 7.jpg' ],
+    video: '',
+    stays: [ { name: 'Machiya House', type: 'Inn', rating: 4.6, amenities: ['Garden', 'Tea'] } ],
+    transport: [ { mode: 'Train', from: 'Tokyo', to: 'Kyoto', time: '2h 15m', price: 120 } ]
+  },
+  {
+    id: 'dubai',
+    title: 'Dubai Skyline',
+    location: 'Dubai, UAE',
+    type: 'city',
+    image: 'assets/hero 4.jpg',
+    price: 1320,
+    rating: 4.5,
+    tags: ['Skyscrapers', 'Desert', 'Luxury'],
+    desc: 'Futuristic architecture and golden dunes adventure.',
+    durationDays: 4,
+    nextStart: '2025-05-30',
+    discountPct: 0,
+    region: 'Asia',
+    gallery: [ 'assets/hero 4.jpg' ],
+    video: '',
+    stays: [ { name: 'Marina View', type: 'Hotel', rating: 4.4, amenities: ['Pool', 'Wi‑Fi'] } ],
+    transport: [ { mode: 'Flight', from: 'Your city', to: 'DXB', time: '7h+', price: 550 } ]
+  },
+  {
+    id: 'queenstown',
+    title: 'Queenstown Thrills',
+    location: 'Queenstown, New Zealand',
+    type: 'mountain',
+    image: 'assets/hero 5.jpg',
+    price: 1520,
+    rating: 4.7,
+    tags: ['Bungee', 'Lakes', 'Adventure'],
+    desc: 'Adventure capital with pristine lakes and alpine air.',
+    durationDays: 6,
+    nextStart: '2025-12-01',
+    discountPct: 0,
+    region: 'Australia',
+    gallery: [ 'assets/hero 5.jpg' ],
+    video: '',
+    stays: [ { name: 'Remarkables Lodge', type: 'Resort', rating: 4.6, amenities: ['Lakeside', 'Spa'] } ],
+    transport: [ { mode: 'Flight', from: 'Auckland', to: 'Queenstown', time: '1h 50m', price: 90 } ]
+  }
+];
+
+

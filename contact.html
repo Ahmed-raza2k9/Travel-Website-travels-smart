@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us — TravelSmart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="contact.css">
+  <meta name="color-scheme" content="light dark" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Hero -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Travel Smart home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-text">Travel Smart</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav"
+          aria-label="Open menu">
+          <i></i>
+          <i></i>
+          <i></i>
+        </button>
+        <ul class="nav-list" id="primaryNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="catalog.html">Trip Catalog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="reviews.html">Tour Review</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle theme"><i class="ri-sun-line"
+            id="themeIcon"></i></button>
+      </div>
+    </div>
+  </header>
+  <div class="contact-hero">
+    <div class="video-background" aria-hidden="true">
+      <video autoplay muted loop playsinline>
+        <source src="./assets/drone-shot.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+    </div>
+
+    <div class="contact-hero-content">
+      <div class="hero-icon" aria-hidden="true"><i class="ri-chat-1-line"></i></div>
+      <h1>Let’s Talk</h1>
+      <p>Questions, collaborations, or custom trip plans — drop us a message and we’ll get back faster than your next
+        flight ✈️</p>
+
+      <div class="hero-features" role="list">
+        <div class="hero-feature" role="listitem"><i class="ri-time-line"></i>24/7 Support</div>
+        <div class="hero-feature" role="listitem"><i class="ri-shield-keyhole-line"></i>Secure & Private</div>
+        <div class="hero-feature" role="listitem"><i class="ri-rocket-line"></i>Fast Response</div>
+      </div>
+    </div>
+
+  </div>
+  <main>
+    <!-- Contact Info -->
+    <section class="container">
+      <div class="contact-cards">
+        <article class="contact-info-card">
+          <div class="contact-icon"><i class="ri-mail-send-line"></i></div>
+          <h3>Email</h3>
+          <p>We usually reply within a few hours.</p>
+          <a class="contact-link" href="mailto:hello@travelsmart.com">hello@travelsmart.com <i
+              class="ri-arrow-right-up-line"></i></a>
+        </article>
+
+        <article class="contact-info-card">
+          <div class="contact-icon"><i class="ri-phone-line"></i></div>
+          <h3>Phone / WhatsApp</h3>
+          <p>Mon–Sat, 9am–8pm PKT.</p>
+          <a class="contact-link" href="tel:+920000000000">+92 00 000 0000 <i class="ri-arrow-right-up-line"></i></a>
+        </article>
+
+        <article class="contact-info-card">
+          <div class="contact-icon"><i class="ri-map-pin-line"></i></div>
+          <h3>Visit Us</h3>
+          <p>Drop by our studio for a coffee and a chat.</p>
+          <span class="contact-link">Karachi, Pakistan</span>
+        </article>
+
+        <article class="contact-info-card">
+          <div class="contact-icon"><i class="ri-customer-service-2-line"></i></div>
+          <h3>Support</h3>
+          <p>Need help with a booking? We’ve got you.</p>
+          <a class="contact-link" href="#faq">Read FAQs <i class="ri-question-line"></i></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Form + Map -->
+    <section class="container contact-grid" id="contact">
+      <!-- Contact Form -->
+      <div class="contact-form-container">
+        <form id="contactForm" class="contact-form" novalidate>
+          <!-- Web3Forms hidden access key (replace value) -->
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+
+          <div class="section-head">
+            <h2>Send a Message</h2>
+            <p class="section-description">Tell us a bit about you and what you’re looking for — we’ll tailor the
+              response.</p>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <div class="input-with-icon">
+                <i class="ri-user-3-line" aria-hidden="true"></i>
+                <input id="fullName" name="name" type="text" placeholder="Danish Ali" autocomplete="name" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <div class="input-with-icon">
+                <i class="ri-mail-line" aria-hidden="true"></i>
+                <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email"
+                  required />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone (optional)</label>
+              <div class="input-with-icon">
+                <i class="ri-phone-line" aria-hidden="true"></i>
+                <input id="phone" name="phone" type="tel" placeholder="+92-3XX-XXXXXXX" autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <div class="input-with-icon">
+                <i class="ri-bookmark-line" aria-hidden="true"></i>
+                <select id="subject" name="subject" required>
+                  <option value="" selected disabled>Choose a topic</option>
+                  <option>General Inquiry</option>
+                  <option>Custom Trip Plan</option>
+                  <option>Website Feedback</option>
+                  <option>Partnerships</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group textarea-icon">
+            <label for="message">Message</label>
+            <div class="input-with-icon">
+              <i class="ri-message-3-line" aria-hidden="true"></i>
+              <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+            </div>
+          </div>
+
+          <div class="checkbox-group">
+            <label class="checkbox-container">
+              <input type="checkbox" id="terms" required />
+              <span class="checkmark" aria-hidden="true"></span>
+              <span class="checkbox-text">I agree to the <a href="/terms.html">Terms</a> and <a
+                  href="/privacy.html">Privacy Policy</a>.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+            <i class="ri-send-plane-2-line" aria-hidden="true"></i>
+          </button>
+
+          <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <!-- Map / Locate -->
+      <aside class="map-card">
+        <div class="map-header">
+          <h3><i class="ri-compass-3-line"></i> Find Us on the Map</h3>
+          <button id="btnLocate" class="btn small"><i class="ri-crosshair-2-line"></i> Locate Me</button>
+        </div>
+
+        <div class="map-wrap">
+          <iframe id="mapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Karachi&hl=auto&z=11&output=embed" title="Map"></iframe>
+        </div>
+
+        <div class="map-footer">
+          <p id="locText">Share your location to get directions.</p>
+          <div class="location-search">
+            <input id="msgEmail" type="email" placeholder="Enter email for directions"
+              aria-label="Email for directions" />
+            <button id="btnSubscribe" class="btn primary">Send</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- FAQ -->
+    <section class="container" id="faq">
+      <div class="section-head text-center">
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-description">Quick answers to common questions about support, plans, and response times.</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How soon will you reply to my message?</h3>
+            <button class="faq-toggle" aria-label="Toggle answer">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>We usually reply within 2–6 hours (often faster during business hours PKT).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you offer custom travel plans?</h3>
+            <button class="faq-toggle" aria-label="Toggle answer">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! Share your dates, budget, and interests — we’ll craft a tailored itinerary.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Is my data safe?</h3>
+            <button class="faq-toggle" aria-label="Toggle answer">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>We use secure forms and never share your data with third parties.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Can I visit your office?</h3>
+            <button class="faq-toggle" aria-label="Toggle answer">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely. Book a slot via the form and we’ll confirm the timing by email.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container">
+      <div class="cta-container">
+        <div class="cta-content">
+          <h2>Prefer a quick call?</h2>
+          <p>Skip the email ping-pong. Book a 15-minute discovery call and get instant clarity.</p>
+          <div class="cta-buttons">
+            <a href="#" class="btn primary">Book a Call</a>
+            <a href="#contact" class="btn secondary">Send a Message</a>
+          </div>
+        </div>
+        <div class="cta-image" aria-hidden="true">
+          <img src="./assets/random nature 19.jpg"
+            alt="Travel planning">
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <a class="brand" href="#top"><span class="brand-mark">✦</span><span class="brand-text">Travel Smart</span></a>
+        <p class="muted">Design-forward travel planning for modern explorers.</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+          <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        </div>
+      </div>
+      <div class="col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#stories">Community</a></li>
+          <li><a href="#deals">Partners</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Safety</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Get the app</h4>
+        <div class="badges">
+          <a class="store" href="#" aria-label="Download on App Store"><i class="ri-apple-line"></i> App Store</a>
+          <a class="store" href="#" aria-label="Get it on Google Play"><i class="ri-google-play-line"></i> Google
+            Play</a>
+        </div>
+      </div>
+    </div>
+    <div class="container legal">
+      <span>© <span id="year"></span> Travel Smart</span>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#sitemap">Sitemap</a>
+    </div>
+  </footer>
+  <script src="contact.js" defer></script>
+</body>
+
+</html>

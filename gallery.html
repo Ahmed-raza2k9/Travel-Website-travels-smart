@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Travel Gallery — Travel Smart</title>
+  <meta name="description"
+    content="Explore our stunning collection of travel photography from destinations around the world." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="./assets/fav-icon.png" type="image/x-icon">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Lightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lg-zoom.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lg-thumbnail.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Travel Smart home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-text">Travel Smart</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav"
+          aria-label="Open menu">
+          <i></i>
+          <i></i>
+          <i></i>
+        </button>
+        <ul class="nav-list" id="primaryNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="catalog.html">Trip Catalog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="reviews.html">Tour Review</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle theme"><i class="ri-sun-line"
+            id="themeIcon"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery-hero" aria-label="Gallery Hero">
+      <div class="container">
+        <div class="gallery-hero-content" data-aos="fade-up">
+          <h1>Travel Gallery</h1>
+          <p>Immerse yourself in breathtaking destinations through our curated collection of travel photography</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery-filters" aria-labelledby="filtersTitle">
+      <div class="container">
+        <div class="gallery-filters" data-aos="fade-up">
+          <h2 id="filtersTitle" class="visually-hidden">Gallery Filters</h2>
+          <div class="filter-buttons">
+            <button style="display: none;" class="filter-btn active" data-filter="all">All</button>
+          </div>
+          <div class="gallery-search">
+            <input type="text" id="gallerySearch" placeholder="Search images..." aria-label="Search gallery images">
+            <button class="search-btn" aria-label="Search"><i class="ri-search-line"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="gallery-main" aria-labelledby="galleryTitle">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <div>
+            <h2 id="galleryTitle">Explore Our Collection</h2>
+            <p>Click on any image to view in full screen with details</p>
+          </div>
+        </div>
+        
+        <div class="masonry-gallery" id="lightgallery" data-aos="fade-up">
+          <!-- Nature Category -->
+          <div class="gallery-item" data-category="nature" data-aos="fade-up" data-aos-delay="100"
+               data-src="assets/random nature 1.jpg" data-sub-html="<h4>Serene Forest Path</h4><p>A peaceful walking trail through lush green forest</p>">
+            <img src="assets/random nature 1.jpg" alt="Serene Forest Path" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Serene Forest Path</h3>
+                <span class="gallery-category">Nature</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="nature" data-aos="fade-up" data-aos-delay="150"
+               data-src="assets/random nature 2.jpg" data-sub-html="<h4>Mountain Vista</h4><p>Breathtaking view of mountain ranges at sunset</p>">
+            <img src="assets/random nature 2.jpg" alt="Mountain Vista" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Mountain Vista</h3>
+                <span class="gallery-category">Nature</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="nature" data-aos="fade-up" data-aos-delay="200"
+               data-src="assets/random nature 3.jpg" data-sub-html="<h4>Coastal Cliffs</h4><p>Dramatic cliffs overlooking the ocean</p>">
+            <img src="assets/random nature 3.jpg" alt="Coastal Cliffs" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Coastal Cliffs</h3>
+                <span class="gallery-category">Nature</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="nature" data-aos="fade-up" data-aos-delay="250"
+               data-src="assets/random nature 4.jpg" data-sub-html="<h4>Tropical Paradise</h4><p>Palm trees and crystal clear waters</p>">
+            <img src="assets/random nature 4.jpg" alt="Tropical Paradise" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Tropical Paradise</h3>
+                <span class="gallery-category">Nature</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="nature" data-aos="fade-up" data-aos-delay="300"
+               data-src="assets/random nature 5.jpg" data-sub-html="<h4>Alpine Lake</h4><p>Pristine mountain lake reflecting snow-capped peaks</p>">
+            <img src="assets/random nature 5.jpg" alt="Alpine Lake" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Alpine Lake</h3>
+                <span class="gallery-category">Nature</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <!-- Urban Category -->
+          <div class="gallery-item" data-category="urban" data-aos="fade-up" data-aos-delay="100"
+               data-src="assets/burjkhalifa 1.jpg" data-sub-html="<h4>Burj Khalifa</h4><p>The world's tallest building piercing the Dubai skyline</p>">
+            <img src="assets/burjkhalifa 1.jpg" alt="Burj Khalifa" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Burj Khalifa</h3>
+                <span class="gallery-category">Urban</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="urban" data-aos="fade-up" data-aos-delay="150"
+               data-src="assets/burjkhalifa 2.jpg" data-sub-html="<h4>Dubai Skyline</h4><p>Modern architecture of Dubai's impressive skyline</p>">
+            <img src="assets/burjkhalifa 2.jpg" alt="Dubai Skyline" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Dubai Skyline</h3>
+                <span class="gallery-category">Urban</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="urban" data-aos="fade-up" data-aos-delay="200"
+               data-src="assets/dubai marina 1.jpg" data-sub-html="<h4>Dubai Marina</h4><p>Luxury yachts and high-rises at Dubai Marina</p>">
+            <img src="assets/dubai marina 1.jpg" alt="Dubai Marina" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Dubai Marina</h3>
+                <span class="gallery-category">Urban</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <!-- Adventure Category -->
+          <div class="gallery-item" data-category="adventure" data-aos="fade-up" data-aos-delay="100"
+               data-src="assets/adventure-trips.jpg" data-sub-html="<h4>Mountain Climbing</h4><p>Adventurous climb to the summit</p>">
+            <img src="assets/adventure-trips.jpg" alt="Mountain Climbing" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Mountain Climbing</h3>
+                <span class="gallery-category">Adventure</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="adventure" data-aos="fade-up" data-aos-delay="150"
+               data-src="assets/safari desert 1.jpg" data-sub-html="<h4>Desert Safari</h4><p>Thrilling adventure through golden sand dunes</p>">
+            <img src="assets/safari desert 1.jpg" alt="Desert Safari" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Desert Safari</h3>
+                <span class="gallery-category">Adventure</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <!-- Cultural Category -->
+          <div class="gallery-item" data-category="cultural" data-aos="fade-up" data-aos-delay="100"
+               data-src="assets/global village 1.jpg" data-sub-html="<h4>Global Village</h4><p>Cultural pavilions showcasing traditions from around the world</p>">
+            <img src="assets/global village 1.jpg" alt="Global Village" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Global Village</h3>
+                <span class="gallery-category">Cultural</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="cultural" data-aos="fade-up" data-aos-delay="150"
+               data-src="assets/global village 2.jpg" data-sub-html="<h4>Cultural Festival</h4><p>Vibrant celebration of diverse cultural heritage</p>">
+            <img src="assets/global village 2.jpg" alt="Cultural Festival" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Cultural Festival</h3>
+                <span class="gallery-category">Cultural</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <!-- Luxury Category -->
+          <div class="gallery-item" data-category="luxury" data-aos="fade-up" data-aos-delay="100"
+               data-src="assets/luxury.jpg" data-sub-html="<h4>Luxury Resort</h4><p>Exclusive beachfront resort with premium amenities</p>">
+            <img src="assets/luxury.jpg" alt="Luxury Resort" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Luxury Resort</h3>
+                <span class="gallery-category">Luxury</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <!-- More Nature Images -->
+          <div class="gallery-item" data-category="nature" data-aos="fade-up" data-aos-delay="350"
+               data-src="assets/random nature 6.jpg" data-sub-html="<h4>Misty Mountains</h4><p>Fog rolling through mountain valleys</p>">
+            <img src="assets/random nature 6.jpg" alt="Misty Mountains" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Misty Mountains</h3>
+                <span class="gallery-category">Nature</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="nature" data-aos="fade-up" data-aos-delay="400"
+               data-src="assets/random nature 7.jpg" data-sub-html="<h4>Autumn Forest</h4><p>Vibrant fall colors in a dense forest</p>">
+            <img src="assets/random nature 7.jpg" alt="Autumn Forest" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Autumn Forest</h3>
+                <span class="gallery-category">Nature</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="nature" data-aos="fade-up" data-aos-delay="450"
+               data-src="assets/random nature 8.jpg" data-sub-html="<h4>Coastal Sunset</h4><p>Golden sunset over calm ocean waters</p>">
+            <img src="assets/random nature 8.jpg" alt="Coastal Sunset" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Coastal Sunset</h3>
+                <span class="gallery-category">Nature</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="nature" data-aos="fade-up" data-aos-delay="500"
+               data-src="assets/random nature 9.jpg" data-sub-html="<h4>Desert Oasis</h4><p>Palm trees surrounding a natural water source in the desert</p>">
+            <img src="assets/random nature 9.jpg" alt="Desert Oasis" />
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-content">
+                <h3>Desert Oasis</h3>
+                <span class="gallery-category">Nature</span>
+              </div>
+              <button class="gallery-zoom"><i class="ri-zoom-in-line"></i></button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="gallery-load-more" data-aos="fade-up">
+          <button class="btn primary" id="loadMoreBtn">
+            <i class="ri-refresh-line"></i> Load More
+          </button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" id="gallery-upload" aria-labelledby="uploadTitle">
+      <div class="container">
+        <div class="upload-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="upload-content">
+            <h2 id="uploadTitle">Share Your Travel Moments</h2>
+            <p>Have stunning travel photos to share? Submit your best shots for a chance to be featured in our gallery.</p>
+            <button class="btn primary upload-btn">
+              <i class="ri-upload-cloud-line"></i> Upload Your Photos
+            </button>
+          </div>
+          <div class="upload-image">
+            <img src="assets/random nature 20.jpg" alt="Share your travel photos" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <a class="brand" href="#top"><span class="brand-mark">✦</span><span class="brand-text">Travel Smart</span></a>
+        <p class="muted">Design-forward travel planning for modern explorers.</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+          <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        </div>
+      </div>
+      <div class="col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#stories">Community</a></li>
+          <li><a href="#deals">Partners</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Safety</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Get the app</h4>
+        <div class="badges">
+          <a class="store" href="#" aria-label="Download on App Store"><i class="ri-apple-line"></i> App Store</a>
+          <a class="store" href="#" aria-label="Get it on Google Play"><i class="ri-google-play-line"></i> Google
+            Play</a>
+        </div>
+      </div>
+    </div>
+    <div class="container legal">
+      <span>© <span id="year"></span> Travel Smart</span>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#sitemap">Sitemap</a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+  <script src="data.js"></script>
+  <script src="shared.js"></script>
+  <script src="gallery.js"></script>
+</body>
+
+</html>

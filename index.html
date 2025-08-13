@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Travel Smart — Explore, Plan, Go</title>
+  <meta name="description"
+    content="Discover, plan, and book extraordinary travel experiences around the world with a beautiful, fast UI." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="./assets/fav-icon.png" type="image/x-icon">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="video-container">
+    <video autoplay muted loop>
+      <source src="./assets/drone-shot.mp4" type="video/mp4">
+    </video>
+  </div>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Travel Smart home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-text">Travel Smart</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav"
+          aria-label="Open menu">
+          <i></i>
+          <i></i>
+          <i></i>
+        </button>
+        <ul class="nav-list" id="primaryNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="catalog.html">Trip Catalog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="reviews.html">Tour Review</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle theme"><i class="ri-sun-line"
+            id="themeIcon"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Hero">
+      <div class="bg-blobs" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-text" data-aos="fade-right" data-aos-delay="100">
+          <h1>Find your next journey</h1>
+          <p>Curated trips, hidden gems, and unforgettable experiences. All in one elegant interface.</p>
+          <div class="trust">
+            <div><i class="ri-shield-check-line"></i> Trusted by 120k+ travelers</div>
+            <div><i class="ri-flashlight-line"></i> Lightning-fast search</div>
+            <div><i class="ri-leaf-line"></i> Climate-conscious picks</div>
+          </div>
+        </div>
+        <div class="hero-right" data-aos="fade-right" data-aos-delay="300">
+          <div class="featured-destination">
+            <div class="featured-image">
+              <img src="assets/random nature 20.jpg" alt="Featured Destination" />
+              <div class="featured-overlay">
+                <div class="featured-content">
+                  <h3>Capri Cliffs Escape</h3>
+                  <p>Limestone cliffs, azure grottos, and lemon groves with scenic hikes.</p>
+                  <div class="featured-meta">
+                    <span class="rating"><i class="ri-star-smile-line"></i> 4.9</span>
+                    <span class="price">From $1,280</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="catalog.html"><button class="btn primary featured-btn" id="btnExplore">
+                <i class="ri-compass-3-line"></i> Explore
+              </button></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section alt" id="travel-categories" aria-labelledby="categoriesTitle">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <div>
+            <h2 id="categoriesTitle">Travel Categories</h2>
+            <p>Explore different types of travel experiences tailored to your preferences.</p>
+          </div>
+        </div>
+        <div class="categories-grid">
+          <article class="category-card" data-aos="zoom-in" data-aos-delay="100">
+            <img src="assets/adventure-trips.jpg" alt="Adventure Trips" />
+            <div class="category-content">
+              <h3>Adventure Trips</h3>
+              <p>Thrilling experiences for adrenaline seekers</p>
+              <a href="catalog.html"><button class="btn secondary">Explore</button></a>
+            </div>
+          </article>
+          <article class="category-card family-card" data-aos="zoom-in" data-aos-delay="200">
+            <img src="assets/family.jpg" alt="Family Travel" />
+            <div class="category-content">
+              <h3>Family Travel</h3>
+              <p>Perfect destinations for family bonding</p>
+              <a href="catalog.html"><button class="btn secondary">Explore</button></a>
+            </div>
+          </article>
+          <article class="category-card" data-aos="zoom-in" data-aos-delay="300">
+            <img src="assets/honeymoon.jpg" alt="Honeymoon" />
+            <div class="category-content">
+              <h3>Honeymoon</h3>
+              <p>Romantic getaways for newlyweds</p>
+              <a href="./catalog.html"><button class="btn secondary">Explore</button></a>
+            </div>
+          </article>
+          <article class="category-card luxury-card" data-aos="zoom-in" data-aos-delay="400">
+            <img src="assets/luxury.jpg" alt="Luxury Travel" />
+            <div class="category-content">
+              <h3>Luxury Travel</h3>
+              <p>Premium experiences and exclusive destinations</p>
+              <a href="./catalog.html"><button class="btn secondary">Explore</button></a>
+            </div>
+          </article>
+          <article class="category-card" data-aos="zoom-in" data-aos-delay="500">
+            <img src="assets/historical.jpg" alt="Historical Tours" />
+            <div class="category-content">
+              <h3>Historical Tours</h3>
+              <p>Journey through time and ancient civilizations</p>
+              <a href="./catalog.html"><button class="btn secondary">Explore</button></a>
+            </div>
+          </article>
+          <article class="category-card" data-aos="zoom-in" data-aos-delay="600">
+            <img src="assets/random nature 1.jpg" alt="Nature Escapes" />
+            <div class="category-content">
+              <h3>Nature Escapes</h3>
+              <p>Connect with nature and wildlife</p>
+              <a href="./catalog.html"><button class="btn secondary">Explore</button></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="experiences" aria-labelledby="expTitle">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <div>
+            <h2 id="expTitle">Popular Experiences</h2>
+            <p>Discover unique adventures and unforgettable moments around the world.</p>
+          </div>
+        </div>
+        <div class="experiences-grid" data-aos="fade-up" data-aos-delay="200">
+          <article class="experience-card" data-aos="flip-up" data-aos-delay="100">
+            <div class="experience-image">
+              <img src="assets/random nature 10.jpg" alt="Beach Paradise" />
+              <div class="experience-overlay">
+                <span class="experience-tag">Beach</span>
+              </div>
+            </div>
+            <div class="experience-content">
+              <h3>Beach Paradise</h3>
+              <p>Crystal clear waters and pristine sandy beaches</p>
+              <div class="experience-meta">
+                <span class="duration"><i class="ri-time-line"></i> 5-7 days</span>
+                <span class="price">From $800</span>
+              </div>
+              <a href="catalog.html"><button class="btn secondary">Explore</button></a>
+            </div>
+          </article>
+          <article class="experience-card" data-aos="flip-up" data-aos-delay="200">
+            <div class="experience-image">
+              <img src="assets/random nature 11.jpg" alt="Mountain Adventure" />
+              <div class="experience-overlay">
+                <span class="experience-tag">Adventure</span>
+              </div>
+            </div>
+            <div class="experience-content">
+              <h3>Mountain Adventure</h3>
+              <p>Thrilling hikes and breathtaking summit views</p>
+              <div class="experience-meta">
+                <span class="duration"><i class="ri-time-line"></i> 3-5 days</span>
+                <span class="price">From $600</span>
+              </div>
+              <a href="catalog.html"><button class="btn secondary">Explore</button></a>
+            </div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-image">
+              <img src="assets/random nature 12.jpg" alt="Cultural Heritage" />
+              <div class="experience-overlay">
+                <span class="experience-tag">Cultural</span>
+              </div>
+            </div>
+            <div class="experience-content">
+              <h3>Cultural Heritage</h3>
+              <p>Ancient temples and traditional ceremonies</p>
+              <div class="experience-meta">
+                <span class="duration"><i class="ri-time-line"></i> 4-6 days</span>
+                <span class="price">From $750</span>
+              </div>
+              <a href="catalog.html"><button class="btn secondary">Explore</button></a>
+            </div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-image">
+              <img src="assets/random nature 13.jpg" alt="Wildlife Safari" />
+              <div class="experience-overlay">
+                <span class="experience-tag">Wildlife</span>
+              </div>
+            </div>
+            <div class="experience-content">
+              <h3>Wildlife Safari</h3>
+              <p>Close encounters with majestic animals</p>
+              <div class="experience-meta">
+                <span class="duration"><i class="ri-time-line"></i> 6-8 days</span>
+                <span class="price">From $1200</span>
+              </div>
+              <a href="catalog.html"><button class="btn secondary">Explore</button></a>
+            </div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-image">
+              <img src="assets/random nature 14.jpg" alt="Desert Expedition" />
+              <div class="experience-overlay">
+                <span class="experience-tag">Desert</span>
+              </div>
+            </div>
+            <div class="experience-content">
+              <h3>Desert Expedition</h3>
+              <p>Vast landscapes and starlit nights</p>
+              <div class="experience-meta">
+                <span class="duration"><i class="ri-time-line"></i> 4-7 days</span>
+                <span class="price">From $900</span>
+              </div>
+              <a href="catalog.html"><button class="btn secondary">Explore</button></a>
+            </div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-image">
+              <img src="assets/random nature 15.jpg" alt="Forest Retreat" />
+              <div class="experience-overlay">
+                <span class="experience-tag">Nature</span>
+              </div>
+            </div>
+            <div class="experience-content">
+              <h3>Forest Retreat</h3>
+              <p>Peaceful nature walks and wildlife spotting</p>
+              <div class="experience-meta">
+                <span class="duration"><i class="ri-time-line"></i> 3-5 days</span>
+                <span class="price">From $550</span>
+              </div>
+              <a href="catalog.html"><button class="btn secondary">Explore</button></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="deals" aria-labelledby="dealsTitle">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <div>
+            <h2 id="dealsTitle">Limited-time deals</h2>
+            <p>Exclusive offers for early explorers.</p>
+          </div>
+        </div>
+        <div class="grid deals" data-aos="fade-up" data-aos-delay="200">
+          <article class="deal-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="badge">-25%</div>
+            <h3>Amalfi Coast Weekender</h3>
+            <p class="muted">Italy • 4 nights • Breakfast included</p>
+            <div class="price"><span class="now">$899</span><span class="was">$1,199</span></div>
+            <a href="catalog.html"><button class="btn primary">Book now</button></a>
+          </article>
+          <article class="deal-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="badge">-18%</div>
+            <h3>Kyoto Culture Pass</h3>
+            <p class="muted">Japan • 5 nights • Tea ceremony</p>
+            <div class="price"><span class="now">$1,480</span><span class="was">$1,799</span></div>
+            <a href="catalog.html"><button class="btn primary">Book now</button></a>
+          </article>
+          <article class="deal-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="badge">-30%</div>
+            <h3>Serengeti Safari</h3>
+            <p class="muted">Tanzania • 6 nights • Guided drives</p>
+            <div class="price"><span class="now">$2,450</span><span class="was">$3,500</span></div>
+            <a href="catalog.html"><button class="btn primary">Book now</button></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section premium" id="premium-features">
+      <div class="premium-bg">
+        <div class="premium-particles"></div>
+      </div>
+      <div class="container">
+        <div class="section-head premium-head" data-aos="fade-up">
+          <div>
+            <h2>Premium Travel Experience</h2>
+            <p>Unlock exclusive features and personalized services that redefine luxury travel</p>
+          </div>
+        </div>
+        <div class="premium-grid">
+          <div class="premium-card featured">
+            <div class="premium-badge">Most Popular</div>
+            <div class="premium-icon">
+              <i class="ri-vip-crown-line"></i>
+            </div>
+            <h3>VIP Concierge Service</h3>
+            <p>24/7 dedicated travel concierge with instant booking, priority reservations, and exclusive access to
+              sold-out experiences.</p>
+            <ul class="premium-features-list">
+              <li><i class="ri-check-line"></i> Priority restaurant reservations</li>
+              <li><i class="ri-check-line"></i> Exclusive event access</li>
+              <li><i class="ri-check-line"></i> Instant booking confirmation</li>
+              <li><i class="ri-check-line"></i> Personal travel assistant</li>
+            </ul>
+            <div class="premium-price">
+              <span class="price">$299</span>
+              <span class="period">/trip</span>
+            </div>
+            <a href="book.html" class="btn premium-btn">Unlock VIP Access</a>
+          </div>
+
+          <div class="premium-card">
+            <div class="premium-icon">
+              <i class="ri-helicopter-line"></i>
+            </div>
+            <h3>Helicopter Transfers</h3>
+            <p>Skip the traffic and arrive in style with private helicopter transfers between destinations and airports.
+            </p>
+            <ul class="premium-features-list">
+              <li><i class="ri-check-line"></i> Private helicopter service</li>
+              <li><i class="ri-check-line"></i> Scenic aerial routes</li>
+              <li><i class="ri-check-line"></i> Flexible scheduling</li>
+              <li><i class="ri-check-line"></i> Professional pilots</li>
+            </ul>
+            <div class="premium-price">
+              <span class="price">$1,200</span>
+              <span class="period">/transfer</span>
+            </div>
+            <button class="btn premium-btn">Book Helicopter</button>
+          </div>
+
+          <div class="premium-card">
+            <div class="premium-icon">
+              <i class="ri-hotel-line"></i>
+            </div>
+            <h3>Luxury Accommodations</h3>
+            <p>Stay in handpicked 5-star hotels and exclusive resorts with premium amenities and personalized service.
+            </p>
+            <ul class="premium-features-list">
+              <li><i class="ri-check-line"></i> 5-star hotel selection</li>
+              <li><i class="ri-check-line"></i> Suite upgrades</li>
+              <li><i class="ri-check-line"></i> Spa access included</li>
+              <li><i class="ri-check-line"></i> Butler service</li>
+            </ul>
+            <div class="premium-price">
+              <span class="price">$500</span>
+              <span class="period">/night</span>
+            </div>
+            <button class="btn premium-btn">View Luxury Stays</button>
+          </div>
+
+          <div class="premium-card">
+            <div class="premium-icon">
+              <i class="ri-camera-line"></i>
+            </div>
+            <h3>Professional Photography</h3>
+            <p>Capture your journey with award-winning photographers and create lasting memories of your adventure.</p>
+            <ul class="premium-features-list">
+              <li><i class="ri-check-line"></i> Professional photographer</li>
+              <li><i class="ri-check-line"></i> 4K video footage</li>
+              <li><i class="ri-check-line"></i> Edited photo album</li>
+              <li><i class="ri-check-line"></i> Drone photography</li>
+            </ul>
+            <div class="premium-price">
+              <span class="price">$800</span>
+              <span class="period">/session</span>
+            </div>
+            <button class="btn premium-btn">Book Photographer</button>
+          </div>
+        </div>
+
+        <div class="premium-cta" data-aos="zoom-in" data-aos-delay="400">
+          <div class="premium-cta-content">
+            <h3>Experience Travel Like Never Before</h3>
+            <p>Join our exclusive premium membership and unlock unlimited access to luxury travel experiences worldwide.
+            </p>
+            <div class="premium-benefits">
+              <span class="benefit"><i class="ri-shield-check-line"></i> 100% Satisfaction Guarantee</span>
+              <span class="benefit"><i class="ri-time-line"></i> Instant Booking</span>
+              <span class="benefit"><i class="ri-customer-service-2-line"></i> 24/7 Premium Support</span>
+            </div>
+            <button class="btn ultra-premium-btn">
+              <i class="ri-vip-crown-line"></i>
+              Become Premium Member
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="why-choose" aria-labelledby="whyChooseTitle">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <div>
+            <h2 id="whyChooseTitle">Why Choose Travel Smart</h2>
+            <p>Elevating your travel experience with unparalleled service and expertise</p>
+          </div>
+        </div>
+        <div class="why-choose-grid">
+          <div class="why-choose-content">
+            <div class="feature" data-aos="fade-right" data-aos-delay="100">
+              <i class="ri-shield-star-line"></i>
+              <div>
+                <h3>Curated Excellence</h3>
+                <p>Every destination and accommodation is personally vetted by our travel experts to ensure exceptional
+                  quality and authenticity.</p>
+              </div>
+            </div>
+            <div class="feature" data-aos="fade-right" data-aos-delay="200">
+              <i class="ri-customer-service-2-line"></i>
+              <div>
+                <h3>Dedicated Concierge</h3>
+                <p>Our elite concierge team provides personalized assistance throughout your journey, available 24/7 via
+                  our secure mobile platform.</p>
+              </div>
+            </div>
+            <div class="feature" data-aos="fade-right" data-aos-delay="300">
+              <i class="ri-wallet-3-line"></i>
+              <div>
+                <h3>Transparent Value</h3>
+                <p>Competitive pricing with no hidden fees, backed by our price guarantee and flexible payment options
+                  tailored to your needs.</p>
+              </div>
+            </div>
+            <div class="feature" data-aos="fade-right" data-aos-delay="400">
+              <i class="ri-earth-line"></i>
+              <div>
+                <h3>Sustainable Travel Network</h3>
+                <p>Access to our exclusive global network of eco-conscious partners and authentic local experiences that
+                  support communities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="newsletter" aria-labelledby="newsletterTitle">
+      <div class="container">
+        <div class="newsletter-content" data-aos="fade-up">
+          <div class="newsletter-text">
+            <h2 id="newsletterTitle">Stay Updated</h2>
+            <p>Subscribe to our newsletter for exclusive travel deals, destination guides, and insider tips delivered
+              straight to your inbox.</p>
+          </div>
+          <form class="newsletter-form" id="newsletterForm">
+            <div class="newsletter-inputs">
+              <input type="text" placeholder="Your name" required />
+              <input type="email" placeholder="Your email" required />
+            </div>
+            <button class="btn primary" type="submit">Subscribe Now</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery section moved to a dedicated page -->
+
+    <section class="section" id="travel-tips" aria-labelledby="tipsTitle">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <div>
+            <h2 id="tipsTitle">Expert Travel Insights</h2>
+            <p>Exclusive resources crafted by seasoned travel professionals</p>
+          </div>
+        </div>
+        <div class="tips-grid" data-aos="fade-up" data-aos-delay="200">
+          <article class="tip-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/budget-tip.jpg" alt="Luxury for Less" />
+            <div class="tip-content">
+              <span class="tip-category">FINANCIAL WISDOM</span>
+              <h3>Luxury for Less</h3>
+              <p>Strategic approaches to experiencing premium travel while optimizing your investment</p>
+              <button class="btn secondary">Access Guide</button>
+            </div>
+          </article>
+          <article class="tip-card">
+            <img src="assets/technology-tips.jpg" alt="Digital Travel Ecosystem" />
+            <div class="tip-content">
+              <span class="tip-category">TECH ESSENTIALS</span>
+              <h3>Digital Travel Ecosystem</h3>
+              <p>Curated selection of premium applications and devices for the discerning modern traveler</p>
+              <button class="btn secondary">Access Guide</button>
+            </div>
+          </article>
+          <article class="tip-card">
+            <img src="assets/transportation-tips.jpg" alt="Global Mobility Mastery" />
+            <div class="tip-content">
+              <span class="tip-category">TRANSPORTATION</span>
+              <h3>Global Mobility Mastery</h3>
+              <p>Insider knowledge for seamless navigation of international transportation networks</p>
+              <button class="btn secondary">Access Guide</button>
+            </div>
+          </article>
+          <article class="tip-card">
+            <img src="assets/pakaging-guide.jpg" alt="Curated Packing Protocol" />
+            <div class="tip-content">
+              <span class="tip-category">PREPARATION</span>
+              <h3>Curated Packing Protocol</h3>
+              <p>Sophisticated packing methodologies from travel experts for optimal journey preparation</p>
+              <button class="btn secondary">Access Guide</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="our-story" aria-labelledby="storyTitle">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-image" data-aos="fade-right">
+            <img src="assets/our-story.jpg" alt="Our Story" />
+          </div>
+          <div class="story-content" data-aos="fade-right" data-aos-delay="200">
+            <h2 id="storyTitle">Our Story</h2>
+            <p>Founded with a passion for connecting people with extraordinary destinations, Travel Smart has been
+              crafting unforgettable journeys for over a decade. Our team of experienced travelers and local experts
+              work together to create personalized experiences that go beyond the ordinary.</p>
+            <p>From hidden gems to iconic landmarks, we believe every destination has a story waiting to be discovered.
+              Join us on this incredible journey and let us help you create memories that will last a lifetime.</p>
+            <button class="btn primary">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="team" aria-labelledby="teamTitle">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <div>
+            <h2 id="teamTitle">Meet Our Team</h2>
+            <p>The passionate experts behind your perfect journey</p>
+          </div>
+        </div>
+        <div class="team-grid" data-aos="fade-up" data-aos-delay="200">
+          <article class="team-member" data-aos="flip-right" data-aos-delay="100">
+            <img src="assets/team-member1.jpg" alt="Team Member 1" />
+            <div class="member-content">
+              <h3>Sarah Johnson</h3>
+              <p class="position">Travel Director</p>
+              <p>15+ years of experience in luxury travel planning</p>
+              <div class="member-social">
+                <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="team-member" data-aos="flip-right" data-aos-delay="200">
+            <img src="assets/team-member2.jpg" alt="Team Member 2" />
+            <div class="member-content">
+              <h3>Michael Chen</h3>
+              <p class="position">Adventure Specialist</p>
+              <p>Expert in extreme sports and adventure tourism</p>
+              <div class="member-social">
+                <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="team-member" data-aos="flip-right" data-aos-delay="300">
+            <img src="assets/team-member3.jpg" alt="Team Member 3" />
+            <div class="member-content">
+              <h3>Emma Rodriguez</h3>
+              <p class="position">Cultural Curator</p>
+              <p>Specialist in cultural experiences and local immersion</p>
+              <div class="member-social">
+                <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <a class="brand" href="#top"><span class="brand-mark">✦</span><span class="brand-text">Travel Smart</span></a>
+        <p class="muted">Design-forward travel planning for modern explorers.</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+          <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        </div>
+      </div>
+      <div class="col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#stories">Community</a></li>
+          <li><a href="#deals">Partners</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Safety</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Get the app</h4>
+        <div class="badges">
+          <a class="store" href="#" aria-label="Download on App Store"><i class="ri-apple-line"></i> App Store</a>
+          <a class="store" href="#" aria-label="Get it on Google Play"><i class="ri-google-play-line"></i> Google
+            Play</a>
+        </div>
+      </div>
+    </div>
+    <div class="container legal">
+      <span>© <span id="year"></span> Travel Smart</span>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#sitemap">Sitemap</a>
+    </div>
+  </footer>
+
+  <template id="cardTemplate">
+    <article class="card" data-type="">
+      <div class="media">
+        <img src="" alt="" loading="lazy" />
+        <div class="pill rating"><i class="ri-star-smile-line"></i><span></span></div>
+        <button class="pill action" data-quickview><i class="ri-eye-line"></i><span>Quick view</span></button>
+      </div>
+      <div class="content">
+        <h3 class="title"></h3>
+        <p class="muted location"></p>
+        <div class="meta">
+          <div class="tags"></div>
+          <div class="price"><span class="from">From</span> <strong class="amount"></strong></div>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <dialog class="modal" id="quickModal">
+    <div class="modal-body">
+      <button class="btn ghost close" data-close-modal aria-label="Close"><i class="ri-close-line"></i></button>
+      <img class="modal-img" alt="Preview" />
+      <div class="modal-content">
+        <h3 class="modal-title"></h3>
+        <p class="modal-location muted"></p>
+        <p class="modal-desc"></p>
+        <div class="gallery" id="modalGallery"></div>
+        <div class="video" id="modalVideoWrap"></div>
+        <div class="inline-meta">
+          <div class="pill">Duration: <span id="modalDuration"></span></div>
+          <div class="pill">Next start: <span id="modalStart"></span></div>
+          <div class="pill" id="modalDiscount"></div>
+        </div>
+        <div class="two-col">
+          <div>
+            <h4>Accommodations</h4>
+            <ul class="list" id="modalStays"></ul>
+          </div>
+          <div>
+            <h4>Transport options</h4>
+            <ul class="list" id="modalTransport"></ul>
+          </div>
+        </div>
+        <button class="btn primary">Plan this trip</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="data.js" defer></script>
+  <script src="shared.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+    });
+  </script>
+</body>
+
+</html>

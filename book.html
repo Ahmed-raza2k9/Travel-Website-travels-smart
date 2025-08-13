@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Trip - Travel Smart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" href="assets/fav-icon.png" type="image/x-icon">
+</head>
+<body class="book-page">
+    <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Travel Smart home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-text">Travel Smart</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav"
+          aria-label="Open menu">
+          <i></i>
+          <i></i>
+          <i></i>
+        </button>
+        <ul class="nav-list" id="primaryNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="catalog.html">Trip Catalog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="reviews.html">Tour Review</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle theme"><i class="ri-sun-line"
+            id="themeIcon"></i></button>
+      </div>
+    </div>
+  </header>
+
+    <main>
+        <section class="hero book-hero">
+            <div class="container">
+                <div class="book-hero-content">
+                    <div class="book-hero-info">
+                        <h1>Book Your Trip</h1>
+                        <p>Complete your booking details below to secure your spot on this amazing adventure.</p>
+                        <div class="trip-summary">
+                            <div class="trip-summary-image">
+                                <img id="tripImage" src="" alt="Trip Image">
+                            </div>
+                            <div class="trip-summary-info">
+                                <h2 id="tripTitle">Loading...</h2>
+                                <p id="tripLocation" class="muted">Loading location...</p>
+                                <div class="trip-summary-meta">
+                                    <span class="rating-pill">
+                                        <i class="ri-star-fill"></i>
+                                        <span id="tripRating">0.0</span>
+                                    </span>
+                                    <span class="duration-pill">
+                                        <i class="ri-time-line"></i>
+                                        <span id="tripDuration">0 days</span>
+                                    </span>
+                                    <span class="price-pill">
+                                        <i class="ri-money-dollar-circle-line"></i>
+                                        <span id="tripPrice">$0</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="booking-content">
+                    <div class="booking-form-container">
+                        <div class="booking-form-card">
+                            <h2>Booking Information</h2>
+                            <form id="bookingForm" class="booking-form">
+                                <div class="form-section">
+                                    <h3>Personal Information</h3>
+                                    <div class="form-grid">
+                                        <div class="field">
+                                            <label for="firstName">First Name *</label>
+                                            <input type="text" id="firstName" name="firstName" required>
+                                        </div>
+                                        <div class="field">
+                                            <label for="lastName">Last Name *</label>
+                                            <input type="text" id="lastName" name="lastName" required>
+                                        </div>
+                                        <div class="field">
+                                            <label for="email">Email Address *</label>
+                                            <input type="email" id="email" name="email" required>
+                                        </div>
+                                        <div class="field">
+                                            <label for="phone">Phone Number *</label>
+                                            <input type="tel" id="phone" name="phone" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h3>Trip Details</h3>
+                                    <div class="form-grid">
+                                        <div class="field">
+                                            <label for="travelDate">Travel Date *</label>
+                                            <input type="date" id="travelDate" name="travelDate" required>
+                                        </div>
+                                        <div class="field">
+                                            <label for="travelers">Number of Travelers *</label>
+                                            <select id="travelers" name="travelers" required>
+                                                <option value="">Select number</option>
+                                                <option value="1">1 Traveler</option>
+                                                <option value="2">2 Travelers</option>
+                                                <option value="3">3 Travelers</option>
+                                                <option value="4">4 Travelers</option>
+                                                <option value="5">5 Travelers</option>
+                                                <option value="6">6 Travelers</option>
+                                                <option value="7">7 Travelers</option>
+                                                <option value="8">8 Travelers</option>
+                                                <option value="9">9 Travelers</option>
+                                                <option value="10">10+ Travelers</option>
+                                            </select>
+                                        </div>
+                                        <div class="field span-2">
+                                            <label for="specialRequests">Special Requests</label>
+                                            <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requirements, dietary restrictions, or additional requests..."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h3>Additional Services</h3>
+                                    <div class="services-grid">
+                                        <label class="service-checkbox">
+                                            <input type="checkbox" name="travelInsurance" value="true">
+                                            <span class="checkmark"></span>
+                                            <div class="service-info">
+                                                <h4>Travel Insurance</h4>
+                                                <p>Comprehensive coverage for your trip</p>
+                                                <span class="service-price">+$89 per person</span>
+                                            </div>
+                                        </label>
+                                        <label class="service-checkbox">
+                                            <input type="checkbox" name="airportTransfer" value="true">
+                                            <span class="checkmark"></span>
+                                            <div class="service-info">
+                                                <h4>Airport Transfer</h4>
+                                                <p>Round-trip airport transportation</p>
+                                                <span class="service-price">+$45 per person</span>
+                                            </div>
+                                        </label>
+                                        <label class="service-checkbox">
+                                            <input type="checkbox" name="guidedTour" value="true">
+                                            <span class="checkmark"></span>
+                                            <div class="service-info">
+                                                <h4>Guided Tour</h4>
+                                                <p>Professional local guide included</p>
+                                                <span class="service-price">+$120 per person</span>
+                                            </div>
+                                        </label>
+                                        <label class="service-checkbox">
+                                            <input type="checkbox" name="mealPlan" value="true">
+                                            <span class="checkmark"></span>
+                                            <div class="service-info">
+                                                <h4>Meal Plan</h4>
+                                                <p>All meals included during the trip</p>
+                                                <span class="service-price">+$75 per person</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                -->
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn primary">
+                                        <i class="ri-lock-line"></i> Complete Booking
+                                    </button>
+                                    <a href="catalog.html" class="btn ghost">Back to Trips</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="booking-sidebar">
+                        <div class="info-card">
+                            <h3>Why Book with Us?</h3>
+                            <ul class="benefits-list">
+                                <li><i class="ri-check-line"></i> Best price guarantee</li>
+                                <li><i class="ri-check-line"></i> 24/7 customer support</li>
+                                <li><i class="ri-check-line"></i> Flexible cancellation</li>
+                                <li><i class="ri-check-line"></i> Secure payment</li>
+                                <li><i class="ri-check-line"></i> Expert travel advice</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Need Help?</h3>
+                            <p>Our travel experts are here to help you plan the perfect trip.</p>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="ri-phone-line"></i>
+                                    <span>+1 (555) 123-4567</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="ri-mail-line"></i>
+                                    <span>bookings@travelsmart.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="ri-time-line"></i>
+                                    <span>24/7 Support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="col">
+                    <h4>Travel Smart</h4>
+                    <p>Your trusted partner for unforgettable travel experiences around the world.</p>
+                    <div class="social">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Trips</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Travel Insurance</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">Emergency Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="ri-phone-line"></i> +1 (555) 123-4567</li>
+                        <li><i class="ri-mail-line"></i> info@travelsmart.com</li>
+                        <li><i class="ri-map-pin-line"></i> 123 Travel St, City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="legal">
+                <span>&copy; 2024 Travel Smart. All rights reserved.</span>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="shared.js"></script>
+    <script src="book.js"></script>
+</body>
+</html>

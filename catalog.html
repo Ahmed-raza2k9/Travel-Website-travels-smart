@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Trip Catalog — Travel Smart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./assets/fav-icon.png" type="image/x-icon">
+
+  </head>
+  <body class="catalog-page">
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="./assets/drone-shot.mp4" type="video/mp4">
+      </video>
+    </div>
+    <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Travel Smart home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-text">Travel Smart</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav"
+          aria-label="Open menu">
+          <i></i>
+          <i></i>
+          <i></i>
+        </button>
+        <ul class="nav-list" id="primaryNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="catalog.html">Trip Catalog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="reviews.html">Tour Review</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle theme"><i class="ri-sun-line"
+            id="themeIcon"></i></button>
+      </div>
+    </div>
+  </header>
+
+    <main>
+      <section class="section" aria-labelledby="catTitle">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2 id="catTitle" class="catalog-sec-title">Explore trips</h2>
+              <p>Sort by country or activity. Compare up to 3 items.</p>
+            </div>
+          </div>
+
+          <div class="tabs" id="catTabs">
+            <div class="tab-list">
+              <button class="tab is-active" data-tab="by-type">Destination</button>
+              <button class="tab" data-tab="transport">Transportation</button>
+              <button class="tab" data-tab="stays">Accomodation</button>
+              <button class="tab" data-tab="by-country">Sort by Country</button>
+              <button class="tab" data-tab="by-type">Activity</button>
+            </div>
+
+            <div class="tab-panels">
+              <section id="panel-by-type" class="is-active">
+                <div class="filters">
+                  <div class="filter-row">
+                    <div class="chips" id="typeChips"></div>
+                    <div class="refine">
+                      <input id="qSearch" type="search" placeholder="Search destination or tag" />
+                      <select class="sort" id="qSort" aria-label="Sort trips">
+                        <option value="popularity">Sort: Popularity</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="alpha">Alphabetical</option>
+                        <option value="rating">Top Rated</option>
+                      </select>
+                      <select class="rating" id="qRating" aria-label="Minimum rating">
+                        <option value="0">Rating: Any</option>
+                        <option value="4">Rating: 4.0+</option>
+                        <option value="4.5">Rating: 4.5+</option>
+                      </select>
+                      <select class="duration" id="qDuration" aria-label="Duration">
+                        <option value="any">Duration: Any</option>
+                        <option value="short">Short (1-3d)</option>
+                        <option value="medium">Medium (4-7d)</option>
+                        <option value="long">Long (8d+)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid cards" id="gridType"></div>
+                <div class="compare-bar" id="compareBar"><span class="muted">Comparing:</span> <span id="compareTags"></span><button class="btn ghost sm" id="btnClearCompare">Clear</button></div>
+              </section>
+
+              <section id="panel-transport">
+                <div class="grid cards" id="gridTransport"></div>
+              </section>
+
+              <section id="panel-stays">
+                <div class="grid cards" id="gridStays"></div>
+              </section>
+
+              <section id="panel-by-country">
+                <div class="grid cards" id="gridCountry"></div>
+              </section>
+
+              <section id="panel-by-activity">
+                <div class="chips" id="activityChips"></div>
+                <div class="grid cards" id="gridActivity"></div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="col">
+          <a class="brand" href="#top"><span class="brand-mark">✦</span><span class="brand-text">Travel Smart</span></a>
+          <p class="muted">Design-forward travel planning for modern explorers.</p>
+          <div class="social">
+            <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+          </div>
+        </div>
+        <div class="col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#stories">Community</a></li>
+            <li><a href="#deals">Partners</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Safety</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Get the app</h4>
+          <div class="badges">
+            <a class="store" href="#" aria-label="Download on App Store"><i class="ri-apple-line"></i> App Store</a>
+            <a class="store" href="#" aria-label="Get it on Google Play"><i class="ri-google-play-line"></i> Google Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="container legal">
+        <span>© <span id="year"></span> Travel Smart</span>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#sitemap">Sitemap</a>
+      </div>
+    </footer>
+
+    <template id="tplCard">
+      <article class="card" data-id="">
+        <div class="media">
+          <img src="" alt="" />
+          <div class="pill rating"><i class="ri-star-smile-line"></i><span></span></div>
+          <button class="pill action" data-compare><i class="ri-scales-2-line"></i><span>Compare</span></button>
+        </div>
+        <div class="content">
+          <h3 class="title"></h3>
+          <p class="muted location"></p>
+          <div class="meta">
+            <div class="tags"></div>
+            <div class="price"><span class="from">From</span> <strong class="amount"></strong></div>
+          </div>
+          <div class="actions">
+            <button class="btn primary" data-book><i class="ri-calendar-check-line"></i> Book Now</button>
+            <button class="btn ghost" data-details><i class="ri-information-line"></i> Details</button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <!-- Details Modal -->
+    <dialog class="modal" id="detailsModal" aria-labelledby="detailsTitle">
+      <div class="modal-body">
+        <button class="btn ghost close" data-close-modal aria-label="Close"><i class="ri-close-line"></i></button>
+        <img class="modal-img" id="detailsImg" alt="Preview" />
+        <div class="modal-content">
+          <h3 class="modal-title" id="detailsTitle"></h3>
+          <p class="modal-location muted" id="detailsLocation"></p>
+          <p id="detailsDesc"></p>
+          
+          <div class="details-grid">
+            <div class="detail-section">
+              <h4><i class="ri-star-line"></i> Trip Details</h4>
+              <div class="detail-cards">
+                <div class="detail-card">
+                  <i class="ri-star-smile-line"></i>
+                  <div>
+                    <span class="label">Rating</span>
+                    <span class="value" id="detailsRating"></span>
+                  </div>
+                </div>
+                <div class="detail-card">
+                  <i class="ri-time-line"></i>
+                  <div>
+                    <span class="label">Duration</span>
+                    <span class="value" id="detailsDuration"></span>
+                  </div>
+                </div>
+                <div class="detail-card">
+                  <i class="ri-calendar-line"></i>
+                  <div>
+                    <span class="label">Next Start</span>
+                    <span class="value" id="detailsStart"></span>
+                  </div>
+                </div>
+                <div class="detail-card">
+                  <i class="ri-money-dollar-circle-line"></i>
+                  <div>
+                    <span class="label">Price</span>
+                    <span class="value" id="detailsPrice"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h4><i class="ri-list-check"></i> Highlights</h4>
+              <div class="highlights-list" id="detailsTags"></div>
+            </div>
+
+            <div class="detail-section">
+              <h4><i class="ri-sun-line"></i> Weather</h4>
+              <div id="weatherBox" class="weather-box">
+                <button class="btn secondary" id="btnCheckWeather"><i class="ri-cloudy-line"></i> Check weather</button>
+                <div id="weatherResult" class="weather-display hidden">
+                  <div class="weather-header">
+                    <i class="ri-map-pin-line"></i>
+                    <span id="weatherLocation">Location</span>
+                  </div>
+                  <div class="weather-temp" id="weatherTemp">--°C</div>
+                  <div class="weather-desc" id="weatherDesc">Click to check current weather</div>
+                  <div class="weather-details">
+                    <div class="weather-item">
+                      <i class="ri-wind-line"></i>
+                      <span id="weatherWind">-- km/h</span>
+                    </div>
+                    <div class="weather-item">
+                      <i class="ri-drop-line"></i>
+                      <span id="weatherHumidity">--%</span>
+                    </div>
+                    <div class="weather-item">
+                      <i class="ri-eye-line"></i>
+                      <span id="weatherVisibility">-- km</span>
+                    </div>
+                    <div class="weather-item">
+                      <i class="ri-sun-line"></i>
+                      <span id="weatherUV">--</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn primary" id="detailsBookBtn"><i class="ri-calendar-check-line"></i> Book This Trip</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Book Now Modal -->
+    <dialog class="modal" id="bookModal" aria-labelledby="bookTitle">
+      <div class="modal-body">
+        <button class="btn ghost close" data-close-modal aria-label="Close"><i class="ri-close-line"></i></button>
+        <img class="modal-img" id="bookImg" alt="Preview" />
+        <div class="modal-content">
+          <h3 class="modal-title" id="bookTitle">Book your trip</h3>
+          <p class="modal-location muted" id="bookSubtitle"></p>
+          <form id="bookForm" class="form-grid">
+            <div class="field">
+              <label for="fullName">Full name</label>
+              <input id="fullName" name="fullName" type="text" placeholder="John Doe" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="+1 555 123 4567" />
+            </div>
+            <div class="field">
+              <label for="travelDate">Travel date</label>
+              <input id="travelDate" name="travelDate" type="date" required />
+            </div>
+            <div class="field">
+              <label for="travelers">Travelers</label>
+              <input id="travelers" name="travelers" type="number" min="1" value="2" required />
+            </div>
+            <div class="field span-2">
+              <label for="notes">Notes</label>
+              <textarea id="notes" name="notes" rows="3" placeholder="Any preferences or special requests?"></textarea>
+            </div>
+            <div class="field span-2">
+              <button class="btn primary" type="submit"><i class="ri-send-plane-line"></i> Submit booking request</button>
+            </div>
+          </form>
+          <div id="bookSuccess" class="success hidden">
+            <i class="ri-checkbox-circle-line"></i>
+            <p>Thanks! We received your request and will reach out shortly.</p>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="data.js" defer></script>
+    <script src="shared.js" defer></script>
+    <script src="catalog.js" defer></script>
+  </body>
+  </html>
+
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Details - Travel Smart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/fav-icon.png" type="image/x-icon">
+
+</head>
+<body class="detail-page">
+    <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Travel Smart home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-text">Travel Smart</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav"
+          aria-label="Open menu">
+          <i></i>
+          <i></i>
+          <i></i>
+        </button>
+        <ul class="nav-list" id="primaryNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="catalog.html">Trip Catalog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="reviews.html">Tour Review</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle theme"><i class="ri-sun-line"
+            id="themeIcon"></i></button>
+      </div>
+    </div>
+  </header>
+    <main>
+        <section class="detail-hero">
+            <div class="container">
+                <div class="detail-hero-content">
+                    <div class="detail-hero-image">
+                        <img id="tripImage" src="" alt="Trip Image">
+                        <div class="detail-hero-overlay">
+                            <div class="detail-hero-info">
+                                <h1 id="tripTitle">Loading...</h1>
+                                <p id="tripLocation" class="location"><i class="ri-map-pin-line"></i> <span>Loading location...</span></p>
+                                <div class="detail-hero-meta">
+                                    <span class="rating-pill">
+                                        <i class="ri-star-fill"></i>
+                                        <span id="tripRating">0.0</span>
+                                    </span>
+                                    <span class="duration-pill">
+                                        <i class="ri-time-line"></i>
+                                        <span id="tripDuration">0 days</span>
+                                    </span>
+                                    <span class="price-pill">
+                                        <i class="ri-money-dollar-circle-line"></i>
+                                        <span id="tripPrice">$0</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="detail-content-section">
+            <div class="container">
+                <div class="detail-content">
+                    <div class="detail-main">
+                        <div class="detail-description">
+                            <h2>About This Trip</h2>
+                            <p id="tripDescription">Loading description...</p>
+                        </div>
+
+                        <div class="detail-highlights">
+                            <h2>Trip Highlights</h2>
+                            <div class="highlights-grid" id="tripHighlights">
+                                <!-- Highlights will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="detail-gallery">
+                            <h2>Photo Gallery</h2>
+                            <div class="gallery-grid" id="tripGallery">
+                                <!-- Gallery will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-sidebar">
+                        <div class="detail-card trip-info-card">
+                            <h3>Trip Details</h3>
+                            <div class="detail-info-grid">
+                                <div class="detail-info-item">
+                                    <i class="ri-calendar-line"></i>
+                                    <div>
+                                        <span class="label">Next Start</span>
+                                        <span class="value" id="tripStart">Loading...</span>
+                                    </div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <i class="ri-time-line"></i>
+                                    <div>
+                                        <span class="label">Duration</span>
+                                        <span class="value" id="tripDurationSidebar">Loading...</span>
+                                    </div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <i class="ri-star-line"></i>
+                                    <div>
+                                        <span class="label">Rating</span>
+                                        <span class="value" id="tripRatingSidebar">Loading...</span>
+                                    </div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <i class="ri-money-dollar-circle-line"></i>
+                                    <div>
+                                        <span class="label">Price</span>
+                                        <span class="value" id="tripPriceSidebar">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail-card weather-card">
+                            <h3><i class="ri-cloudy-line"></i> Weather Information</h3>
+                            <div class="weather-section">
+                                <button class="btn secondary" id="checkWeatherBtn">
+                                    <i class="ri-cloudy-line"></i> Check Weather
+                                </button>
+                                <div id="weatherDisplay" class="weather-display hidden">
+                                    <!-- Weather info will be populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail-card booking-card">
+                            <h3>Book This Trip</h3>
+                            <p>Ready to start your adventure? Book this trip now!</p>
+                            <a href="#" class="btn primary book-btn" id="bookNowBtn">
+                                <i class="ri-calendar-check-line book-icon"></i> Book Now
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="col">
+                    <h4>Travel Smart</h4>
+                    <p>Your trusted partner for unforgettable travel experiences around the world.</p>
+                    <div class="social">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Trips</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Travel Insurance</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">Emergency Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="ri-phone-line"></i> +1 (555) 123-4567</li>
+                        <li><i class="ri-mail-line"></i> info@travelsmart.com</li>
+                        <li><i class="ri-map-pin-line"></i> 123 Travel St, City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="legal">
+                <span>&copy; 2024 Travel Smart. All rights reserved.</span>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="shared.js"></script>
+    <script src="detail.js"></script>
+</body>
+</html>
