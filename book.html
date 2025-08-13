@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,35 +9,36 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="icon" href="assets/fav-icon.png" type="image/x-icon">
 </head>
+
 <body class="book-page">
     <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Travel Smart home">
-        <span class="brand-mark" aria-hidden="true">✦</span>
-        <span class="brand-text">Travel Smart</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav"
-          aria-label="Open menu">
-          <i></i>
-          <i></i>
-          <i></i>
-        </button>
-        <ul class="nav-list" id="primaryNav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="catalog.html">Trip Catalog</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="reviews.html">Tour Review</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="btn ghost" id="themeToggle" aria-label="Toggle theme"><i class="ri-sun-line"
-            id="themeIcon"></i></button>
-      </div>
-    </div>
-  </header>
+        <div class="container header-inner">
+            <a class="brand" href="#top" aria-label="Travel Smart home">
+                <span class="brand-mark" aria-hidden="true">✦</span>
+                <span class="brand-text">Travel Smart</span>
+            </a>
+            <nav class="nav" aria-label="Primary">
+                <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav"
+                    aria-label="Open menu">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </button>
+                <ul class="nav-list" id="primaryNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="catalog.html">Trip Catalog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="reviews.html">Tour Review</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn ghost" id="themeToggle" aria-label="Toggle theme"><i class="ri-sun-line"
+                        id="themeIcon"></i></button>
+            </div>
+        </div>
+    </header>
 
     <main>
         <section class="hero book-hero">
@@ -97,7 +99,7 @@
                                         </div>
                                         <div class="field">
                                             <label for="phone">Phone Number *</label>
-                                            <input type="tel" id="phone" name="phone" required>
+                                            <input type="number" id="phone" name="phone" required>
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +129,8 @@
                                         </div>
                                         <div class="field span-2">
                                             <label for="specialRequests">Special Requests</label>
-                                            <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requirements, dietary restrictions, or additional requests..."></textarea>
+                                            <textarea id="specialRequests" name="specialRequests" rows="4"
+                                                placeholder="Any special requirements, dietary restrictions, or additional requests..."></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -173,8 +176,93 @@
                                         </label>
                                     </div>
                                 </div>
-
-
+                                <div class="form-section">
+                                    <h3>Payment Summary</h3>
+                                    <div class="payment-summary">
+                                        <div class="summary-item">
+                                            <span>Base Price</span>
+                                            <span id="basePrice">$0</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <span>Additional Services</span>
+                                            <span id="additionalServices">$0</span>
+                                        </div>
+                                        <div class="summary-item total">
+                                            <span>Total Amount</span>
+                                            <div class="total-amount-section">
+                                                <span id="totalAmount">$0</span>
+                                                <div class="currency-converter">
+                                                    <button type="button" class="currency-toggle" id="currencyToggle">
+                                                        <i class="ri-exchange-line"></i>
+                                                        <span id="currentCurrency">USD</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </button>
+                                                    <div class="currency-dropdown" id="currencyDropdown">
+                                                        <div class="currency-option" data-currency="USD" data-rate="1">
+                                                            <span class="currency-code">USD</span>
+                                                            <span class="currency-name">US Dollar</span>
+                                                            <span class="currency-symbol">$</span>
+                                                        </div>
+                                                        <div class="currency-option" data-currency="PKR"
+                                                            data-rate="278.50">
+                                                            <span class="currency-code">PKR</span>
+                                                            <span class="currency-name">Pakistani Rupee</span>
+                                                            <span class="currency-symbol">₨</span>
+                                                        </div>
+                                                        <div class="currency-option" data-currency="SAR"
+                                                            data-rate="3.75">
+                                                            <span class="currency-code">SAR</span>
+                                                            <span class="currency-name">Saudi Riyal</span>
+                                                            <span class="currency-symbol">ر.س</span>
+                                                        </div>
+                                                        <div class="currency-option" data-currency="EUR"
+                                                            data-rate="0.92">
+                                                            <span class="currency-code">EUR</span>
+                                                            <span class="currency-name">Euro</span>
+                                                            <span class="currency-symbol">€</span>
+                                                        </div>
+                                                        <div class="currency-option" data-currency="GBP"
+                                                            data-rate="0.79">
+                                                            <span class="currency-code">GBP</span>
+                                                            <span class="currency-name">British Pound</span>
+                                                            <span class="currency-symbol">£</span>
+                                                        </div>
+                                                        <div class="currency-option" data-currency="AED"
+                                                            data-rate="3.67">
+                                                            <span class="currency-code">AED</span>
+                                                            <span class="currency-name">UAE Dirham</span>
+                                                            <span class="currency-symbol">د.إ</span>
+                                                        </div>
+                                                        <div class="currency-option" data-currency="INR"
+                                                            data-rate="83.15">
+                                                            <span class="currency-code">INR</span>
+                                                            <span class="currency-name">Indian Rupee</span>
+                                                            <span class="currency-symbol">₹</span>
+                                                        </div>
+                                                        <div class="currency-option" data-currency="CAD"
+                                                            data-rate="1.35">
+                                                            <span class="currency-code">CAD</span>
+                                                            <span class="currency-name">Canadian Dollar</span>
+                                                            <span class="currency-symbol">C$</span>
+                                                        </div>
+                                                        <div class="currency-option" data-currency="AUD"
+                                                            data-rate="1.52">
+                                                            <span class="currency-code">AUD</span>
+                                                            <span class="currency-name">Australian Dollar</span>
+                                                            <span class="currency-symbol">A$</span>
+                                                        </div>
+                                                        <div class="currency-option" data-currency="JPY"
+                                                            data-rate="150.25">
+                                                            <span class="currency-code">JPY</span>
+                                                            <span class="currency-name">Japanese Yen</span>
+                                                            <span class="currency-symbol">¥</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form-actions">
                                     <button type="submit" class="btn primary">
                                         <i class="ri-lock-line"></i> Complete Booking
@@ -273,4 +361,5 @@
     <script src="shared.js"></script>
     <script src="book.js"></script>
 </body>
+
 </html>

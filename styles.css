@@ -5224,6 +5224,7 @@ body.catalog-page {
 .form-section {
   display: grid;
   gap: 20px;
+  overflow: hidden;
 }
 
 .form-section h3 {
